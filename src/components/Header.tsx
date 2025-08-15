@@ -44,17 +44,17 @@ const Header = () => {
   const { time, ampm } = formatTime(currentDate);
 
   return (
-    <header className="pt-8 px-6 sm:px-12 mb-2">
-      <div className="max-w-7xl mx-auto flex flex-row justify-between items-center">
+    <header className="px-6 sm:px-12 mb-2 bg-white">
+      <div className="max-w-7xl mx-auto flex flex-row justify-between items-center h-24">
         {isMobile && <MobileNavigationMenu />}
         {!isMobile && (
           <div className="text-center sm:text-left mb-4 sm:mb-0">
             <div className="flex items-baseline gap-3">
-              <div className="text-5xl font-bold text-[#3d2a1a] leading-none">
+              <div className="text-4xl md:text-5xl font-bold text-[#3d2a1a] leading-none">
                 {formatDay(currentDate)}
               </div>
               <div className="text-left">
-                <div className="text-xl font-semibold text-[#3d2a1a]">
+                <div className="text-sm md:text-xl font-semibold text-[#3d2a1a]">
                   {formatMonth(currentDate)}
                 </div>
               </div>

@@ -24,7 +24,7 @@ export default function Footer() {
           >
             <FaLinkedin />
           </a>
-        </div>
+  </div>
       </div>
     </footer>
   );

@@ -67,20 +67,23 @@ const NavigationMenu = () => {
   return (
     <nav className="relative z-20 py-2">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="w-full border-t border-[#3d2a1a] max-w-5xl mx-auto"></div>
-        <div className="flex justify-evenly items-center py-2">
+        <div className="w-full border-t border-[#3d2a1a] mx-auto"></div>
+
+        {/* Responsive menu row: wraps on wider screens, allows horizontal scroll on narrow screens */}
+        <div className="flex justify-center items-center py-2 gap-2 overflow-x-auto md:overflow-visible md:flex-wrap">
           {navigationItems.map((item) => (
             <Link
               key={item.name}
               to={item.href}
               onClick={() => setActiveItem(item.name)}
-              className={`relative text-2xl font-bold text-[#3d2a1a] px-6 py-2 transition-all duration-300 rounded-md hover:text-yellow-700 hover:bg-[#f5ecd7] ${activeItem === item.name ? "text-yellow-900" : ""}`}
+              className={`relative whitespace-nowrap text-lg md:text-2xl font-bold text-[#3d2a1a] px-4 py-2 transition-all duration-300 rounded-md hover:text-yellow-700 hover:bg-[#f5ecd7] ${activeItem === item.name ? "text-yellow-900" : ""}`}
             >
               {item.name}
             </Link>
           ))}
         </div>
-        <div className="w-full border-b border-[#3d2a1a] max-w-5xl mx-auto"></div>
+
+        <div className="w-full border-b border-[#3d2a1a] mx-auto"></div>
       </div>
     </nav>
   );

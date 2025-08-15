@@ -5,10 +5,9 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navigationItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/#about-us" },
+  { name: "About", href: "/about" },
   { name: "Events", href: "/events" },
   { name: "Incubation", href: "/incubation" },
-  { name: "Alumni", href: "/alumni" },
   { name: "Team", href: "/team" },
   { name: "Contact", href: "/contact" },
 ];
@@ -47,8 +46,8 @@ const MobileNavigationMenu = () => {
             IEDC CUSAT
           </span>
         </Link>
-        <div className="my-4 h-[calc(100vh-8rem)] pb-10 pl-6">
-          <div className="flex flex-col space-y-6">
+        <div className="my-4 h-[calc(100vh-6rem)] pb-10 pl-6 overflow-auto">
+          <div className="flex flex-col space-y-4 text-lg">
             {navigationItems.map((item) => (
               <Link
                 key={item.name}
