@@ -6,12 +6,11 @@ const HeroSection = () => {
   return (
     <section
       ref={ref}
-      className={`relative py-32 sm:py-56 px-6 fade-in-section ${
-        isVisible ? 'is-visible' : ''
-      }`}
+  className={`flex flex-col justify-center items-center w-full min-h-[calc(100vh-120px)] px-6 fade-in-section ${isVisible ? 'is-visible' : ''}`}
+  style={{ minHeight: 'calc(100vh - 120px)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
     >
       {/* Animated Circle Pattern Image on Right */}
-      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 overflow-hidden max-w-[600px]">
+      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 overflow-hidden max-w-[520px] md:max-w-[600px]">
         <img
           src="/images/Circle Pattern Mandala Art.avif"
           alt="Animated Circle Pattern"
@@ -21,7 +20,7 @@ const HeroSection = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column */}
-        <div className="text-left">
+        <div className="text-left transform -translate-y-6 md:-translate-y-8">
           <h1 className="font-headline text-6xl md:text-8xl font-medium text-black headline-text mb-8 leading-tight">
             Innovation & Entrepreneurship Development Cell
           </h1>
