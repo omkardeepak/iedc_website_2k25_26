@@ -62,29 +62,6 @@ const IncubationPage = () => {
         </div>
       </section>
 
-      {/* New Contact Information Section */}
-      <div className="max-w-4xl mx-auto px-6 py-12 text-center">
-        <h1 className="font-headline text-3xl md:text-5xl font-bold mb-12">Contact Us</h1>
-        <p className="font-serif text-2xl md:text-3xl leading-relaxed mb-6">
-          We’re excited to connect with you! Whether you have questions, ideas, or want to collaborate, feel free to reach out. Drop us an email at <strong>cittic@cusat.ac.in</strong> or give us a call at <strong>+91 7907 600 633</strong>. We’re here to help and support your entrepreneurial journey.
-        </p>
-        <div className="mt-8 text-left inline-block">
-          <p className="font-serif text-xl md:text-2xl mb-2"><strong>Email:</strong> cittic@cusat.ac.in</p>
-          <p className="font-serif text-xl md:text-2xl mb-2"><strong>Phone:</strong> +91 7907 600 633</p>
-          <p className="font-serif text-xl md:text-2xl"><strong>Address:</strong> Near University Guest House, CUSAT</p>
-          <p className="font-serif text-xl md:text-2xl mt-4">
-            Visit us online at{' '}
-            <a 
-              href="https://cittic.cusat.ac.in/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-blue-600 underline"
-            >
-              cittic.cusat.ac.in
-            </a>
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

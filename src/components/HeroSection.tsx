@@ -11,12 +11,13 @@ const HeroSection = () => {
       }`}
     >
       {/* Animated Circle Pattern Image on Right */}
-      <img
-        src="/images/Circle Pattern Mandala Art.avif"
-        alt="Animated Circle Pattern"
-        className="circle-layer1 absolute opacity-100 hidden md:block"
-        style={{ width: '1000px', height: '1000px', top: 'calc(50% - 500px)', right: '-500px' }}
-      />
+      <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 overflow-hidden max-w-[600px]">
+        <img
+          src="/images/Circle Pattern Mandala Art.avif"
+          alt="Animated Circle Pattern"
+          className="circle-layer1 w-full h-auto"
+        />
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Left Column */}
