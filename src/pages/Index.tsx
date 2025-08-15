@@ -1,19 +1,9 @@
 import HeroSection from '@/components/HeroSection';
-import About_us from '@/components/About-us';
 
-const Index = () => {
-  return (
-    <div className="min-h-screen">
-      
-      <main>
-        <div className="overflow-x-hidden">
-          <HeroSection />
-        </div>
-        <About_us />
-      </main>
-      
-    </div>
-  );
-};
+const Index = () => (
+  <main className="flex flex-col min-h-screen justify-center items-center overflow-hidden">
+    <HeroSection />
+  </main>
+);
 
 export default Index;

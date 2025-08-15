@@ -8,12 +8,12 @@ const About_us = () => {
     <section
       ref={ref}
       id="about-us"
-      className={`py-12 px-6 fade-in-section ${isVisible ? 'is-visible' : ''}`}
+      className={`flex flex-col justify-center items-center w-full min-h-[calc(100vh-96px)] px-6 py-8 fade-in-section ${isVisible ? 'is-visible' : ''}`}
     >
       <div className="max-w-6xl mx-auto relative">
         {/* Newspaper-like heading */}
         <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl font-bold tracking-widest text-gray-900 mb-3">
+          <h2 className="font-serif text-3xl md:text-5xl font-bold tracking-widest text-gray-900 mb-3">
             ABOUT US
           </h2>
         </div>

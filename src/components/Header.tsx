@@ -44,45 +44,38 @@ const Header = () => {
   const { time, ampm } = formatTime(currentDate);
 
   return (
-    <header className="pt-8 px-6 sm:px-12 mb-2">
-      <div className="max-w-7xl mx-auto flex flex-row justify-between items-center">
+    <header className="px-6 sm:px-12 mb-2 bg-white">
+      <div className="max-w-7xl mx-auto flex flex-row justify-between items-center h-24">
         {isMobile && <MobileNavigationMenu />}
         {!isMobile && (
-          <>
-            {/* Left: Date Section */}
-            <div className="text-center sm:text-left mb-4 sm:mb-0">
-              <div className="flex items-baseline gap-3">
-                <div className="font-headline text-5xl font-bold text-coffee-dark leading-none">
-                  {formatDay(currentDate)}
-                </div>
-                <div className="text-left">
-                  <div className="font-headline text-xl font-semibold text-coffee-dark">
-                    {formatMonth(currentDate)}
-                  </div>
+          <div className="text-center sm:text-left mb-4 sm:mb-0">
+            <div className="flex items-baseline gap-3">
+              <div className="text-4xl md:text-5xl font-bold text-[#3d2a1a] leading-none">
+                {formatDay(currentDate)}
+              </div>
+              <div className="text-left">
+                <div className="text-sm md:text-xl font-semibold text-[#3d2a1a]">
+                  {formatMonth(currentDate)}
                 </div>
               </div>
             </div>
-          </>
+          </div>
         )}
 
-        {/* Centered Main Title */}
         <div className="text-center mb-4 sm:mb-0">
           <img src="/images/IEDC Logo.svg" alt="IEDC CUSAT Logo" className="h-12 sm:h-20 w-auto mx-auto" />
         </div>
 
         {!isMobile && (
-          <>
-            {/* Right: Time Section */}
-            <div className="text-center sm:text-right w-[140px]">
-              <div className="flex items-baseline gap-1 text-3xl text-coffee-dark font-mono">
-                <span className="font-subtitle">{time}</span>
-                <span className="font-subtitle text-xl self-end">{ampm}</span>
-              </div>
+          <div className="text-center sm:text-right w-[140px]">
+            <div className="flex items-baseline gap-1 text-3xl text-[#3d2a1a] font-mono">
+              <span className="italic font-bold">{time}</span>
+              <span className="italic text-xl self-end">{ampm}</span>
             </div>
-          </>
+          </div>
         )}
       </div>
-      <div className="max-w-6xl mx-auto mt-8 h-[2px] bg-coffee-dark"></div>
+      <div className="max-w-6xl mx-auto mt-8 h-[2px] bg-[#3d2a1a]"></div>
     </header>
   );
 };

@@ -4,11 +4,10 @@ import { useIsMobile } from "@/hooks/use-mobile";
 import MobileNavigationMenu from "./MobileNavigationMenu";
 
 const navigationItems = [
-  { name: "Home", href: "/" }, // Changed to root path
-  { name: "About", href: "/#about-us" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
   { name: "Events", href: "/events" },
   { name: "Incubation", href: "/incubation" },
-  { name: "Alumni", href: "/alumni" },
   { name: "Team", href: "/team" },
   { name: "Contact", href: "/contact" },
 ];
@@ -68,45 +67,23 @@ const NavigationMenu = () => {
   return (
     <nav className="relative z-20 py-2">
       <div className="max-w-7xl mx-auto px-6">
-        {/* Top border */}
-        <div className="w-full border-t border-gray-900 max-w-5xl mx-auto"></div>
+        <div className="w-full border-t border-[#3d2a1a] mx-auto"></div>
 
-        {/* Menu row */}
-        <div className="flex justify-evenly items-center py-2">
+        {/* Responsive menu row: wraps on wider screens, allows horizontal scroll on narrow screens */}
+        <div className="flex justify-center items-center py-2 gap-2 overflow-x-auto md:overflow-visible md:flex-wrap">
           {navigationItems.map((item) => (
             <Link
               key={item.name}
               to={item.href}
-              onClick={(e) => {
-                setActiveItem(item.name);
-                if (item.href.startsWith("/#")) {
-                  e.preventDefault();
-                  const targetId = item.href.substring(2);
-                  const targetElement = document.getElementById(targetId);
-                  if (targetElement) {
-                    const headerOffset = 128; // Approximate height of header + nav (8rem * 16px/rem)
-                    const elementPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-                    window.scrollTo({ top: elementPosition - headerOffset, behavior: "smooth" });
-                  }
-                }
-              }}
-              className={`relative font-headline text-2xl font-bold text-black px-6 py-2 transition-all duration-300 rounded-md
-                hover:text-purple-400 hover:bg-gray-100
-                ${activeItem === item.name ? "text-purple-600" : ""}`}
+              onClick={() => setActiveItem(item.name)}
+              className={`relative whitespace-nowrap text-lg md:text-2xl font-bold text-[#3d2a1a] px-4 py-2 transition-all duration-300 rounded-md hover:text-yellow-700 hover:bg-[#f5ecd7] ${activeItem === item.name ? "text-yellow-900" : ""}`}
             >
-              {/* Left vertical border */}
-              <span className="absolute left-0 top-1/2 -translate-y-1/2 h-0 w-[2px] bg-purple-600 transition-all duration-300 group-hover:h-full"></span>
-
               {item.name}
-
-              {/* Right vertical border */}
-              <span className="absolute right-0 top-1/2 -translate-y-1/2 h-0 w-[2px] bg-purple-600 transition-all duration-300 group-hover:h-full"></span>
             </Link>
           ))}
         </div>
 
-        {/* Bottom border */}
-        <div className="w-full border-b border-gray-900 max-w-5xl mx-auto"></div>
+        <div className="w-full border-b border-[#3d2a1a] mx-auto"></div>
       </div>
     </nav>
   );

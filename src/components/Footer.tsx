@@ -2,15 +2,11 @@ import { FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="text-black py-8">
-      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-        
-        {/* Copyright */}
+    <footer className="text-[#3d2a1a] py-8 bg-[#f5ecd7] border-t border-[#3d2a1a]">
+      <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-xl md:text-2xl flex items-center gap-3 font-semibold">
           Copyright © 2025 IEDC CUSAT.
         </p>
-
-        {/* Social Icons */}
         <div className="flex gap-6 text-3xl md:text-4xl">
           <a
             href="https://www.instagram.com/iedc.cusat/"
@@ -28,7 +24,7 @@ export default function Footer() {
           >
             <FaLinkedin />
           </a>
-        </div>
+  </div>
       </div>
     </footer>
   );
