@@ -1,17 +1,19 @@
 import { Linkedin } from "lucide-react";
 
+
 const TeamSection = () => {
   const topMembers = [
-    { name: "Ashwin", role: "Lead", img: "", linkedin: "#" },
-    { name: "Anjana Shankar", role: "Co-Lead", img: "", linkedin: "#" }
+    { name: "Ashwin Menon ", role: "Student Lead ", img:"/images/team/AshwinMenon.jpg", linkedin: "https://www.linkedin.com/in/ashwin-menon-13168a259" },
+    { name: "Anjana Sankar", role: "Student Lead ", img: "/images/team/anjanasankar.jpg", linkedin: "https://www.linkedin.com/in/anjana-sankar-1ba508243/" }
   ];
 
   const bottomMembers = [
-    { name: "Abinash Singh", role: "Tech Lead", img: "", linkedin: "#" },
-    { name: "Abinash Singh", role: "Design Lead", img: "", linkedin: "#" },
-    { name: "Abinash Singh", role: "Marketing Lead", img: "", linkedin: "#" },
-    { name: "Abinash Singh", role: "Operations Lead", img: "", linkedin: "#" },
-    { name: "Abinash Singh", role: "Product Lead", img: "", linkedin: "#" }
+    { name: "Rohit M R", role: "Branding and Marketing Lead", img: "/images/team/Rohit.jpg", linkedin: "www.linkedin.com/in/ rohit-mr" },
+    { name: "Najmudheen k", role: "Operations & Quality lead", img: "/images/team/Najmudheen.jpg", linkedin: "https://www.linkedin.com/in/najmudheenk?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " },
+    { name: "Anand B Vijay", role: "Financial Lead", img: "/images/team/anand.jpg", linkedin: "https://www.linkedin.com/in/anandbvijay?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+    { name: "Lakshmikha Rejith", role: "Creative and Innovation Lead", img: "/images/team/Lakshmikha.jpg", linkedin: "https://www.linkedin.com/in/lakshmikha-rejith" },
+    { name: "Aisha Nama", role: "WIE Lead", img: "/images/team/Aisha_Nama.jpg", linkedin: "https://www.linkedin.com/in/aisha-nama-06256b253/" },
+    { name: "Abinash Singh", role: "Technology Lead", img: "/images/team/abinash.jpg", linkedin: "https://www.linkedin.com/in/abinashsinghlalotra?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app " }
   ];
 
   return (
@@ -30,7 +32,13 @@ const TeamSection = () => {
             key={idx}
             className="flex flex-col items-center transition-transform"
           >
-            <div className="w-48 h-48 bg-gray-300 rounded-full mb-4"></div>
+            {/* <div className="w-48 h-48 bg-gray-300 rounded-full mb-4"></div> */}
+            <img
+              src={member.img}
+              alt={member.name}
+              className="w-48 h-48 rounded-full object-cover mb-4"
+            />
+
             <h3 className="text-2xl font-bold">{member.name}</h3>
             <p className="text-xl text-gray-500">{member.role}</p>
             <a
@@ -52,7 +60,11 @@ const TeamSection = () => {
             key={idx}
             className="flex flex-col items-center transition-transform"
           >
-            <div className="w-36 h-36 bg-gray-300 rounded-full mb-3"></div>
+            <img
+              src={member.img}
+              alt={member.name}
+              className="w-36 h-36 rounded-full object-cover mb-3"
+            />
             <h3 className="text-xl font-bold text-center">{member.name}</h3>
             <p className="text-xs text-gray-500 text-center">{member.role}</p>
             <a
@@ -70,4 +82,4 @@ const TeamSection = () => {
   );
 };
 
-export default TeamSection;
+export default TeamSection;
