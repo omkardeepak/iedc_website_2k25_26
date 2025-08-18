@@ -2,38 +2,86 @@ import React from 'react';
 
 const ContactPage = () => {
   return (
-    <div className="min-h-screen py-12 px-4">
-      <div className="max-w-4xl mx-auto text-center px-4">
-        <h1 className="font-headline text-3xl md:text-5xl font-bold mb-8">Contact Us</h1>
-        <p className="font-serif text-xl md:text-2xl leading-relaxed mb-8">
-          Feel free to send us a message! We'll get back to you as soon as possible.
+    <div className="min-h-screen py-16 px-6">
+      <h1 className="font-headline text-3xl md:text-5xl font-bold text-center mb-12">
+        Contact Us
+      </h1>
+
+    <div className="text-center max-w-6xl md:mb-20 mx-auto flex flex-col md:flex-row items-center justify-center md:gap-20">
+      
+      <div className="flex-1 md:text-2xl ml-14 space-y-4 text-left font-serif text-lg">
+        <p><span className="font-bold">Email:</span> iedc@cusat.ac.in</p>
+        <p><span className="font-bold">Phone:</span> +91 7907 600 633</p>
+        <p><span className="font-bold">Address:</span> Near University Guest House, CUSAT</p>
+        <p>
+          <span className="font-bold">Website:</span>{' '}
+          <a href="https://cittic.cusat.ac.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+            iedc.cusat.ac.in
+          </a>
         </p>
-  <div className="w-full max-w-md mx-auto mt-4">
-          <input 
-            type="email" 
-            placeholder="Your Email Address" 
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 font-serif text-lg"
+      </div>
+
+      <div className="flex-1 md:text-2xl flex items-center justify-center">
+        <div className="w-56 h-56 md:w-72 md:h-72  rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
+          <img 
+            src="/images/IEDC Logo.svg" 
+            alt="Logo" 
+            className="w-full h-full object-contain"
           />
         </div>
+      </div>
+    </div>
 
-        {/* Contact Info from IncubationPage */}
-  <div className="mt-12 text-left w-full max-w-xl mx-auto px-4">
-          <p className="font-serif text-xl md:text-2xl mb-2"><strong>Email:</strong> cittic@cusat.ac.in</p>
-          <p className="font-serif text-xl md:text-2xl mb-2"><strong>Phone:</strong> +91 7907 600 633</p>
-          <p className="font-serif text-xl md:text-2xl"><strong>Address:</strong> Near University Guest House, CUSAT</p>
-          <p className="font-serif text-xl md:text-2xl mt-4">
-            Visit us online at{' '}
-            <a 
-              href="https://cittic.cusat.ac.in/" 
-              target="_blank" 
-              rel="noopener noreferrer" 
-              className="text-blue-600 underline"
-            >
-              cittic.cusat.ac.in
-            </a>
-          </p>
+    <div className="text-center max-w-6xl md:mb-20 mx-auto flex flex-col md:flex-row items-center justify-center md:gap-20">
+      
+      <div className="flex-1 md:text-2xl ml-14 space-y-4 text-left font-serif text-lg">
+        <p><span className="font-bold">Email:</span> npcrusa@gmail.com</p>
+        <p><span className="font-bold">Phone:</span> 011 - 49725600</p>
+        <p><span className="font-bold">Address:</span> RUSA Resource Centre, Old CRS Building, Jawaharlal Nehru University,Aruna Asaf Ali Marg, New Delhi-110067</p>
+        <p>
+          <span className="font-bold">Website:</span>{' '}
+          <a href="https://rusa.nic.in/" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+            rusa.nic.in
+          </a>
+        </p>
+      </div>
+
+      <div className="flex-1 md:text-2xl flex items-center justify-center">
+        <div className="w-56 h-56 md:w-72 md:h-72  rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
+          <img 
+            src="/images/rusa.jpeg" 
+            alt="Logo" 
+            className="w-full h-full object-contain"
+          />
         </div>
       </div>
+    </div>
+
+    <div className="text-center max-w-6xl md:mb-20 mx-auto flex flex-col md:flex-row items-center justify-center md:gap-20">
+      
+      <div className="flex-1 md:text-2xl ml-14 space-y-4 text-left font-serif text-lg">
+        <p><span className="font-bold">Email:</span> cittic@cusat.ac.in</p>
+        <p><span className="font-bold">Phone:</span> +91 7907 600 633</p>
+        <p><span className="font-bold">Address:</span> Near University Guest House, CUSAT</p>
+        <p>
+          <span className="font-bold">Website:</span>{' '}
+          <a href="https://cittic.cusat.ac.in" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">
+            cittic.cusat.ac.in
+          </a>
+        </p>
+      </div>
+
+      <div className="flex-1 md:text-2xl flex items-center justify-center">
+        <div className="w-56 h-56 md:w-72 md:h-72  rounded-lg flex items-center justify-center text-gray-500 overflow-hidden">
+          <img 
+            src="/images/Cittic Logo.svg" 
+            alt="Logo" 
+            className="w-full h-full object-contain"
+          />
+        </div>
+      </div>
+    </div>
+
     </div>
   );
 };
